@@ -8,7 +8,7 @@ const {name , count ,setCount}=useContext(CreateContext);
     
     <div>
         <h1>Hello , {name}</h1>
-        <button onClick={()=>setCount((count)=> count= count+1 )}>Count is {count}</button>
+        <button onClick={()=>setCount(count=> count+1 )}>Count is {count}</button>
     </div>
   )
 }
