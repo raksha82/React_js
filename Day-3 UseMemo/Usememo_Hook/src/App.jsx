@@ -5,11 +5,13 @@ function App() {
   const [number, setNumber] = useState(0);
   const [theme, setTheme]=useState(false);
 
-  const ToggleTheme={
+  const ToggleTheme=useMemo(()=>
+  {
+    return{
 
      color : theme?"white":"black",
      backgroundColor:theme?"black":"white"
-  }
+  }},[theme])
 
   const doubleNumber=useMemo(()=>{ return Slowrunner(number);}
   ,[number]);
@@ -31,6 +33,6 @@ export default App
 
 function Slowrunner(num)
 {
-   for(let i=0;i<100000;i++) {}
+   for(let i=0;i<1000;i++) {}
    return num*2;
 }
