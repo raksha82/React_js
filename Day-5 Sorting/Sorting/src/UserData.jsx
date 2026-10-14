@@ -50,10 +50,12 @@ function UserData(){
     const sorted=udata.filter((data)=>{ return data.age>23})
 
     return <>
+    <div className="p-10">
     <h1 className="text-center underline text-4xl font-black p-5 bg-blue-100">User Data</h1>
     <div className="grid md:grid-cols-2 sm:grid-cols-1  lg:grid-cols-3 bg-blue-100">
     
    {udata.map((data, index)=><User key={index} id={data.id} name={data.name} age={data.age} location={data.location} image={data.image} udata={udata} setUdata={setUdata} ></User>)}
+   </div>
    </div>
     </>
 }
