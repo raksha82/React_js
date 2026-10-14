@@ -8,48 +8,49 @@ import User from "./User"
 function UserData(){
 
     const udata=[
-        {
-    id: 1,
+    {
+     id: 1,
     name: "Arun Kumar",
     age: 22,
-    location: "Chennai",
+    location: "Geneva ",
     image: arun 
   },
   {
     id: 2,
     name: "Priya Sharma",
     age: 24,
-    location: "Coimbatore",
+    location: "Strasbourg",
     image: priya
   },
   {
     id: 3,
     name: "Allen",
     age: 25,
-    location: "Bengaluru",
+    location: " Colmar",
     image: allen
   },
   {
     id: 4,
     name: "Divya S",
     age: 21,
-    location: "Thiruvarur",
+    location: "Lucerne",
     image: divya
   },
   {
-    id: 5,
+    
     name: "Karthik M",
     age: 23,
-    location: "Madurai",
+    location: "Zurich",
     image: karthik
   }
 ]
 
-    console.log(udata);
+    const sorted=udata.filter((data)=>{ return data.age>23})
 
     return <>
     <div className="grid grid-cols-3">
-   {udata.map((data, index)=><User key={index} name={data.name} age={data.age} location={data.location} image={data.image} ></User>)}
+    
+   {udata.map((data, index)=><User key={index} id={data.id} name={data.name} age={data.age} location={data.location} image={data.image} ></User>)}
    </div>
     </>
 }
